@@ -1,21 +1,27 @@
 {
-  "name": "my-qwik-library-name",
-  "version": "0.0.1",
+  "name": "@qwik/template-library",
+  "version": "0.1.1",
   "description": "Create a reusable Qwik component library",
-  "main": "./lib/index.qwik.mjs",
-  "qwik": "./lib/index.qwik.mjs",
-  "types": "./lib-types/index.d.ts",
+  "main": "./dist/index.qwik.cjs",
+  "qwik": "./dist/index.qwik.mjs",
+  "module": "./dist/index.qwik.mjs",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./lib/index.qwik.mjs",
-      "require": "./lib/index.qwik.cjs",
-      "types": "./lib-types/index.d.ts"
+      "import": "./dist/index.qwik.mjs",
+      "require": "./dist/index.qwik.cjs",
+      "types": "./dist/types/index.d.ts"
     }
   },
   "files": [
-    "lib",
-    "lib-types"
+    "dist",
+    "!dist/types/root.d.ts",
+    "!dist/types/entry.dev.d.ts",
+    "!dist/types/entry.ssr.d.ts"
   ],
+  "directories": {
+    "lib": "dist"
+  },
   "engines": {
     "node": ">=15.0.0"
   },
@@ -32,7 +38,8 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "release": "np",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "pack": "rm -rf dist && npm cache clean --force && npm run build && npm pack"
   },
   "devDependencies": {
     "@builder.io/qwik": "1.1.5",

@@ -1,15 +1,18 @@
 import { component$ } from '@builder.io/qwik';
 
-export const Logo = component$(() => {
+export interface LogoProps {
+  url: string;
+  alt: string;
+  width: number;
+  height: number;
+  image: string;
+}
+export const Logo = component$((props: LogoProps) => {
+  const { url, alt, width, height, image } = props;
   return (
     <div>
-      <a href="https://qwik.builder.io/">
-        <img
-          alt="Qwik Logo"
-          width={400}
-          height={147}
-          src="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F667ab6c2283d4c4d878fb9083aacc10f"
-        />
+      <a href={url}>
+        <img alt={alt} width={width} height={height} src={image} />
       </a>
     </div>
   );

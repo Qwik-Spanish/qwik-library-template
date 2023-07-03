@@ -10,6 +10,7 @@ export default defineConfig(() => {
         formats: ['es', 'cjs'],
         fileName: (format) => `index.qwik.${format === 'es' ? 'mjs' : 'cjs'}`,
       },
+      outDir: './dist'
     },
     plugins: [qwikVite()],
   };
