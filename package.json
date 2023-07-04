@@ -1,6 +1,6 @@
 {
-  "name": "@qwik/template-library",
-  "version": "0.1.33",
+  "name": "qwik-template-library",
+  "version": "0.0.1",
   "description": "Create a reusable Qwik component library",
   "main": "./dist/index.qwik.cjs",
   "qwik": "./dist/index.qwik.mjs",
@@ -27,8 +27,13 @@
   },
   "private": false,
   "type": "module",
+  "author": {
+    "name": "Anartz Mugika Ledo",
+    "email": "mugan86@gmail.com",
+    "url": "https://github.com/mugan86"
+  },
   "scripts": {
-    "build": "qwik build",
+    "build": "qwik build && rm -rf ./types",
     "build.lib": "vite build --mode lib",
     "build.types": "tsc --emitDeclarationOnly",
     "dev": "vite --mode ssr",
