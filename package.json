@@ -1,6 +1,6 @@
 {
   "name": "@qwik/template-library",
-  "version": "0.1.1",
+  "version": "0.1.33",
   "description": "Create a reusable Qwik component library",
   "main": "./dist/index.qwik.cjs",
   "qwik": "./dist/index.qwik.mjs",
@@ -53,6 +53,7 @@
     "prettier": "2.8.8",
     "typescript": "5.0.4",
     "undici": "5.22.1",
-    "vite": "4.3.9"
+    "vite": "4.3.9",
+    "vite-plugin-dts": "^3.0.3"
   }
 }

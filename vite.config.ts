@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import { qwikVite } from '@builder.io/qwik/optimizer';
+import dts from 'vite-plugin-dts';
 
 export default defineConfig(() => {
   return {
@@ -8,10 +9,10 @@ export default defineConfig(() => {
       lib: {
         entry: './src/index.ts',
         formats: ['es', 'cjs'],
-        fileName: (format) => `index.qwik.${format === 'es' ? 'mjs' : 'cjs'}`,
+        fileName: (format: string) => `index.qwik.${format === 'es' ? 'mjs' : 'cjs'}`,
       },
       outDir: './dist'
     },
-    plugins: [qwikVite()],
+    plugins: [qwikVite(), dts()],
   };
 });

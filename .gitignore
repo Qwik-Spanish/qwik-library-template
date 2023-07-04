@@ -1,7 +1,7 @@
 # Build
 /dist
 /lib
-/lib-types
+/types/**/*.d.ts
 /server
 
 # Development
@@ -39,3 +39,4 @@ lerna-debug.log*
 
 # Library packages
 qwik-template-library-*.tgz
+
