@@ -1,5 +1,5 @@
 {
-  "name": "qwik-template-library",
+  "name": "qwik-example-lib",
   "version": "0.0.1",
   "description": "Create a reusable Qwik component library",
   "main": "./dist/index.qwik.cjs",

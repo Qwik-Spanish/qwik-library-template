@@ -1,4 +1,5 @@
 import { Counter } from './components/counter';
+import { Hello } from './components/hello';
 import { Logo } from './components/logo';
 
 export default () => {
@@ -21,6 +22,8 @@ export default () => {
         />
         <h4><code>{`<Counter />`}</code> component with <code>{`useCounter`}</code> custom hook</h4>
         <Counter />
+        <br/><br/><br/>
+        <Hello />
       </body>
     </>
   );
