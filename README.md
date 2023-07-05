@@ -105,7 +105,15 @@ Running `npm run pack` generates a file called `qwik-library-1.0.0.tgz`
 
 ### How to consume the generated library for testing locally
 
-Once generated, we need to take this file and execute it using the relative path of the `*.tgz` library to consume it in the new application.
+First, we must create a project in Qwik using the following command:
+
+```bash
+npm create qwik@latest
+```
+
+We have the new project created to test it and once the tgz package is generated, we need to take this file, add it to the root of this project and execute it using the relative path of the `*.tgz` library to consume it in the new application.
+
+!['New project that use to consume library](docs/screens/01-new-project.png)
 
 Run this command:
 
@@ -115,5 +123,9 @@ npm i <PATH tgz package>
 # if we have brought the file to the root directory of our new project
 npm i ./qwik-library-1.0.0.tgz
 ```
+
+If the whole process has gone correctly, it should appear like this:
+
+![Install proccess OK](docs/screens/02-install-ok.png)
 
 **Pending to finish**
